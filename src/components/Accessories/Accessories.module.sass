@@ -1,0 +1,56 @@
+@import "../../sass/fonts"
+
+.accessories
+	@apply mb-24 font-helvetica
+
+	&Title
+		@apply uppercase text-slate-grey mb-7
+
+	&Subtitle
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+
+		@apply uppercase text-4xl mb-7
+
+	&Row
+		@apply grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] justify-center
+
+	&Item
+		border: 1px solid
+		border-image: linear-gradient(180deg, rgba(188, 16, 216, 1) 0%, rgba(80, 0, 250, 0.93) 100%) 1
+
+		@apply flex flex-col items-start p-4
+
+	&ItemImg
+		@apply max-w-[260px] w-full h-[280px] mb-2 mx-auto
+
+	&ItemTitle
+		@apply font-helvetica text-black text-2xl mb-2
+
+	&ItemText
+		@apply text-slate-grey flex grow mb-10
+
+	&ItemPrice
+		@apply text-base text-black font-helvetica-bold mb-5
+
+	&ItemBtn
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+
+		&:hover
+			-webkit-text-fill-color: white
+			text-fill-color: white
+
+		@apply w-full py-[6px] cursor-pointer bg-transparent relative overflow-hidden uppercase transition-all delay-700
+
+		&:before
+			@apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 content-[''] absolute w-full h-full transition-[left] duration-[0.3s] ease-[ease] z-[-1] -left-full top-0
+
+		&:hover:before
+			@apply left-0

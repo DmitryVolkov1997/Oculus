@@ -1,0 +1,57 @@
+@import "../../sass/fonts"
+
+.feature
+	@apply font-helvetica py-24
+
+	&Titles
+		@apply uppercase flex mb-5
+
+	&Title
+		@apply text-base text-slate-grey basis-[300px] pr-5
+
+	&Text
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+
+		@apply text-4xl basis-[330px]
+
+.tabs
+	@apply grid grid-cols-[300px_1fr]
+
+	&Btn
+		@apply flex flex-col items-start text-slate-grey font-helvetica-bold text-slate-grey
+
+	&BtnItem
+		@apply mb-5 last:mb-0
+
+	&BtnItemActive
+		@apply text-black
+
+	&ContentItem
+		@apply grid grid-cols-[auto_280px] gap-x-10 text-slate-grey
+
+	&ContentImg
+		@apply max-w-[580px] w-full h-[320px] object-cover
+
+	&ContentBox
+		@apply flex flex-col grow
+
+	&ContentTitle
+		@apply mb-2 text-2xl font-helvetica
+
+	&ContentText
+		@apply text-base
+
+.video
+	@apply h-[150px] max-w-[280px] w-full bg-content-bg bg-no-repeat bg-cover bg-center flex flex-col items-start justify-end p-2 mt-auto
+
+	&Btn
+		@apply pl-7
+
+	&Text
+		@apply text-soft-lavender mt-2
+
+// https://www.youtube.com/watch?v=JX2uP_MNST0 3-lesson время 1:24:32	

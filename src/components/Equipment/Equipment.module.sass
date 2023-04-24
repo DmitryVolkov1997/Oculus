@@ -1,0 +1,27 @@
+@import "../../sass/fonts"
+
+.equipment
+  @apply mb-16
+
+  &Title
+    @apply font-helvetica text-base uppercase mb-12 text-slate-grey
+
+  &Box
+    @apply grid grid-cols-[2fr_1fr_1fr] grid-rows-[repeat(2,1fr)] gap-5
+
+  &BoxTitle
+    background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    background-clip: text
+    text-fill-color: transparent
+    @apply text-4xl uppercase mb-3 font-helvetica
+
+  &BoxText
+    @apply text-slate-grey mb-1 font-helvetica
+
+  &BoxItemOne
+    @apply row-[1/-1]
+
+  &BoxImg
+    @apply mb-[10px] border border-solid border-[#CACAD6]

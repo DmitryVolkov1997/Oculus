@@ -1,0 +1,64 @@
+@import "../../sass/fonts"
+
+.game
+	@apply font-helvetica text-slate-grey pb-20
+
+	&Title
+		@apply text-base uppercase	mb-12
+
+	&Row
+		@apply grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))]
+
+	&DescrTitle
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+		@apply text-4xl basis-[330px] uppercase mb-3 max-w-[300px]
+
+	&DescrText
+		@apply text-base text-slate-grey mb-8
+
+	&DescrLink
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+		border: 1px solid
+		border-image: linear-gradient(180deg, rgba(188, 16, 216, 1) 0%, rgba(80, 0, 250, 0.93) 100%) 1
+		@apply uppercase font-helvetica-bold py-4 px-12 inline-block mb-10 text-center
+		&:hover
+			-webkit-text-fill-color: white
+			text-fill-color: white
+
+		@apply cursor-pointer bg-transparent relative overflow-hidden uppercase transition-all delay-700
+
+		&:before
+			@apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 content-[''] absolute w-full h-full transition-[left] duration-[0.3s] ease-[ease] z-[-1] -left-full top-0
+
+		&:hover:before
+			@apply left-0
+
+	&Item
+		border: 1px solid
+		border-image: linear-gradient(180deg, rgba(188, 16, 216, 1) 0%, rgba(80, 0, 250, 0.93) 100%) 1
+
+		@apply p-4 flex flex-col
+
+	&ItemImg
+		@apply object-cover	w-full h-[280px] mb-4 inline-block
+
+	&ItemTitle
+		@apply text-black text-2xl mb-3
+
+	&ItemText
+		@apply flex grow mb-9
+
+	&ItemLink
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent

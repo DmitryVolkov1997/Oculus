@@ -1,0 +1,28 @@
+@import "../../sass/fonts"
+
+.contacts
+	@apply mb-[90px]
+
+	&Title
+		@apply text-2xl font-helvetica mb-7
+
+	&Row
+		@apply grid grid-cols-2
+
+	&Form
+		@apply relative
+
+	&FormInput
+		@apply text-[#CACAD6] font-helvetica outline-none w-full h-[55px] border-b border-b-[#CACAD6] pl-2 text-black mb-3
+
+	&FormBtn
+		@apply absolute w-12 h-12 rounded-full bg-[#CACAD6] top-0 right-0 cursor-pointer uppercase text-slate-grey font-helvetica-bold
+
+	&Text
+		@apply font-helvetica text-[13px] text-slate-grey
+
+	&Info
+		@apply grid items-end justify-end
+
+	&InfoLink
+		@apply font-helvetica text-slate-grey hover:text-blue-900 transition-all

@@ -1,0 +1,28 @@
+@import "../../sass/fonts"
+
+.top
+	min-height: calc(100vh - 81px)
+	background-image: url("../../assets/images/top-bg.png")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: bottom center
+
+	&Row
+		min-height: calc(100vh - 81px)
+
+		@apply flex flex-col text-slate-grey font-helvetica
+
+	&Title
+		@apply text-8xl font-helvetica mb-2.5 pt-[11%]
+
+	&Subtitle
+		@apply text-4xl mb-1
+
+	&Text
+		@apply mb-12
+
+	&Buttons
+		@apply flex font-helvetica-bold
+
+	&Btn
+		@apply max-w-[300px] w-full relative mb-2 hover:bg-red-600 hover:text-white transition-all delay-75

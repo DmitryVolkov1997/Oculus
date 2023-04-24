@@ -1,0 +1,51 @@
+@import "../../sass/fonts"
+
+.buy
+	@apply pb-32 text-center relative overflow-x-hidden
+
+	&Row
+		@apply text-center flex flex-col items-center
+
+	&Bg
+		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		background-clip: text
+		text-fill-color: transparent
+		opacity: 0.1
+		line-height: 350px
+		position: absolute !important
+		z-index: -1
+		animation: line-text 6s linear 1s infinite
+
+		@apply text-[400px] text-center relative font-sans font-bold
+
+	&Btns
+		@apply flex justify-center font-helvetica-bold w-full mb-3 mt-5
+
+	&Btn
+		@apply max-w-[300px] w-full relative mb-2 block
+
+		&:hover
+			-webkit-text-fill-color: white
+			text-fill-color: white
+
+		@apply cursor-pointer bg-transparent relative overflow-hidden uppercase transition-all delay-700
+
+		&:before
+			@apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 content-[''] absolute w-full h-full transition-[left] duration-[0.3s] ease-[ease] z-[-1] -left-full top-0
+
+		&:hover:before
+			@apply left-0
+
+	&Text
+		@apply text-slate-grey font-helvetica
+
+@keyframes line-text
+	from
+		transform: translateX(115%)
+		transform-origin: left center
+
+	to
+		transform: translateX(-115%)
+		transform-origin: right center
