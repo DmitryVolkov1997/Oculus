@@ -1,19 +1,20 @@
 import cn from 'classnames'
-import { DetailedHTMLProps, HTMLAttributes } from 'react'
+import { DetailedHTMLProps, Dispatch, HTMLAttributes, SetStateAction } from 'react'
 import { Link } from '../navLinks'
 import { MenuItem } from './MenuItem/MenuItem'
 import styles from './MenuList.module.sass'
 
 interface MenuListProps extends DetailedHTMLProps<HTMLAttributes<HTMLUListElement>, HTMLUListElement> {
-	links: Link[]
+	links: Link[],
+	setMenu: Dispatch<SetStateAction<boolean>>
 }
 
-export const MenuList = ({ links, className }: MenuListProps) => {
+export const MenuList = ({ links, className, setMenu }: MenuListProps) => {
 	return (
 		<ul className={cn(styles.list, className)}>
 			{
 				links.map((link) => (
-					<MenuItem key={link.id} {...link} />
+					<MenuItem key={link.id} setMenu={setMenu} {...link} />
 				))
 			}
 		</ul>

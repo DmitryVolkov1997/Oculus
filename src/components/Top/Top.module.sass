@@ -26,3 +26,30 @@
 
 	&Btn
 		@apply max-w-[300px] w-full relative mb-2 hover:bg-red-600 hover:text-white transition-all delay-75
+
+@media(max-width:768px)
+	.top
+		&Title
+			@apply text-6xl
+
+		&Subtitle
+			@apply text-3xl
+
+@media(max-width:540px)
+	.top
+		@apply text-center
+
+		&Title
+			@apply text-5xl
+
+		&Subtitle
+			@apply text-2xl
+
+		&Row
+			@apply flex flex-col items-center
+
+		&Text
+			@apply text-center mb-8
+
+		&Buttons
+			@apply flex-col items-center w-full

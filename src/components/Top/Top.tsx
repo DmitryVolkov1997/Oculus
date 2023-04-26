@@ -31,7 +31,7 @@ export const Top = ({ }: TopProps) => {
 							className={styles.topBtn}
 							appearance='ghost'
 						>
-							BUY NOW
+							399,99 USD
 						</Button>
 					</div>
 

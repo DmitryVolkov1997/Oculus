@@ -11,4 +11,25 @@
 	@apply flex gap-x-5 justify-end
 
 .icon
-	@apply cursor-pointer
+	@apply cursor-pointer hover:fill-blue-700 transition-all
+
+@media(max-width:991px)
+	.footer
+		@apply border border-[#CACAD6] shadow-md
+
+		&Row
+			@apply grid grid-cols-1 items-start h-auto py-5
+
+	.logo
+		@apply grid justify-start mb-4
+
+	.socialIcons
+		@apply flex gap-x-5 justify-start
+
+	.nav
+		@apply mb-4
+
+	.list
+		flex-direction: column
+		align-items: flex-start !important
+		gap: 10px 0

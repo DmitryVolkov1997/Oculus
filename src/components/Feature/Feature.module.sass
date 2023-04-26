@@ -54,4 +54,53 @@
 	&Text
 		@apply text-soft-lavender mt-2
 
-// https://www.youtube.com/watch?v=JX2uP_MNST0 3-lesson время 1:24:32	
+@media(max-width:991px)
+	.tabs
+		@apply grid grid-cols-[1fr]
+
+		&Btn
+			@apply mb-5
+
+@media(max-width:768px)
+	.feature
+		&Titles
+			@apply uppercase flex flex-col mb-5
+
+		&Title
+			@apply text-base text-slate-grey basis-0 pr-5 mb-3
+
+		&Text
+			@apply basis-0
+
+	.tabs
+		&ContentItem
+			@apply grid grid-cols-[1fr]
+
+		&ContentImg
+			@apply max-w-full h-[320px] object-cover
+
+		&ContentTitle
+			@apply my-4 text-2xl font-helvetica
+
+		&ContentText
+			@apply text-base mb-4
+
+	.video
+		@apply h-[320px] max-w-full w-full
+
+		&Btn
+			@apply pl-7
+
+		&Text
+			@apply text-soft-lavender mt-2
+
+@media(max-width:540px)
+	.feature
+		&Titles
+			@apply uppercase flex flex-col mb-5
+
+		&Title
+			@apply text-base text-slate-grey basis-0 pr-5 mb-3
+
+		&Text
+			@apply text-2xl basis-0

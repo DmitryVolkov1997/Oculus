@@ -12,7 +12,7 @@ export const Footer = () => {
 				<div className={styles.footerRow}>
 
 					<nav className={styles.nav}>
-						<MenuList />
+						<MenuList className={styles.list} />
 					</nav>
 
 					<NavLink className={styles.logo} to={'/'}>

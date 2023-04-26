@@ -26,3 +26,16 @@
 
 	&InfoLink
 		@apply font-helvetica text-slate-grey hover:text-blue-900 transition-all
+
+@media(max-width:768px)
+	.contacts
+		@apply mb-[90px]
+
+		&Title
+			@apply text-2xl font-helvetica mb-5
+
+		&Row
+			@apply grid grid-cols-1
+
+		&Info
+			@apply grid items-end justify-end mt-3

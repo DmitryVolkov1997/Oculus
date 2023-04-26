@@ -4,10 +4,10 @@
 	@apply font-helvetica text-slate-grey pb-20
 
 	&Title
-		@apply text-base uppercase	mb-12
+		@apply text-base uppercase mb-12
 
 	&Row
-		@apply grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))]
+		@apply grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))]
 
 	&DescrTitle
 		background: linear-gradient(180deg, #BC10D8 0%, rgba(80, 0, 250, 0.93) 100%)
@@ -41,6 +41,9 @@
 		&:hover:before
 			@apply left-0
 
+	&Descr
+		@apply pr-2
+
 	&Item
 		border: 1px solid
 		border-image: linear-gradient(180deg, rgba(188, 16, 216, 1) 0%, rgba(80, 0, 250, 0.93) 100%) 1
@@ -62,3 +65,33 @@
 		-webkit-text-fill-color: transparent
 		background-clip: text
 		text-fill-color: transparent
+
+@media(max-width:540px)
+	.game
+		@apply text-center
+
+		&Title
+			@apply mb-3
+
+		&DescrTitle
+			@apply text-2xl basis-0 uppercase mb-0 max-w-full
+
+@media(max-width:410px)
+	.game
+		&Item
+			@apply text-center
+
+		&ItemTitle
+			@apply text-black text-xl mb-3
+
+		&ItemText
+			@apply flex grow mb-6
+
+		&Row
+			@apply grid grid-cols-1
+
+		&ItemImg
+			@apply object-cover	w-full h-[240px] mb-4 inline-block
+
+		&Descr
+			@apply pr-0

@@ -1,9 +1,7 @@
 import { Container } from 'components'
 import styles from './Contacts.module.sass'
 
-interface ContactsProps {
-
-}
+interface ContactsProps {}
 
 export const Contacts = ({ }: ContactsProps) => {
 	return (

@@ -15,3 +15,54 @@
 
 .basket
 	@apply grid col-span-1 justify-self-end
+
+.menuBurger
+	@apply hidden
+
+@media(max-width:991px)
+	.header
+		@apply relative
+
+	.nav
+		@apply grid-cols-[1fr_3fr_1fr] gap-x-3
+
+	.list
+		@apply absolute w-full flex flex-col items-center left-0 top-0 top-full bg-slate-200 h-screen z-50 invisible opacity-0 transition-all delay-200 -top-[100%]
+
+		&.active
+			@apply visible opacity-100 top-[100%]
+
+		& li
+			@apply border-b border-b-slate-300 w-full text-center
+
+		& a
+			@apply block py-6 text-xl
+
+	.menuBurger
+		position: relative
+		width: 40px
+		height: 35px
+		cursor: pointer
+		display: block
+
+		&::before,
+		&::after,
+		& span
+			position: absolute
+			left: 0
+			content: ''
+			width: 100%
+			height: 3px
+			background-color: black
+			display: inline-block
+
+		&::before
+			top: 0
+
+		&::after
+			bottom: 0
+
+		span
+			@apply top-4
+
+// 1:06 	
